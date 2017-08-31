@@ -54,7 +54,7 @@ function GetMore5(){
 				success:function(data){
 					if(data.Status == 1){
 						var re = data.Result.List;
-						console.log(data.Result);
+//						console.log(data.Result);
 						for(var i in re){
 							allB += '<p class="index-guesstext">'
 							allB +=		'<span class="index-text04">'+re[i].DriverName+'</span>'

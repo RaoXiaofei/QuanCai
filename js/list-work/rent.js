@@ -67,7 +67,7 @@ function GetMore10(){
 				},
 				success:function(data){
 					if(data.Status == 1){
-						console.log(this.pageIndex9);								
+//						console.log(this.pageIndex9);								
 						var re = data.Result.List;
 						for(var i in re){
 							allRe += '<p class="index-guesstext" id="'+re[i].ID+'" onclick="ShowRentDe(this)">'

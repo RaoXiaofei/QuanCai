@@ -22,7 +22,7 @@ $.ajax({
 	url:urlf+"api/Company/ProvideDetail?id="+listID,
 	async:true,
 	success:function(data){
-		console.log(data.Result);
+//		console.log(data.Result);
 		var re = data.Result;
 		
 		pro += '<span class="work-line" style="float: right;cursor: pointer;"onclick="Report()">'

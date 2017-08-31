@@ -10,8 +10,8 @@
 }
 .bott div{
 	width: 30%;
-	float: left;
-	margin-right: 15px;
+    float: left;
+    
 }
 .bott a:link{
 	text-decoration: none;

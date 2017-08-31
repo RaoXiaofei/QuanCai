@@ -41,7 +41,7 @@ function GetSummerJob(){
   			"Type": 0
 		},
 		success:function(data){
-			console.log(data.Result.List);
+//			console.log(data.Result.List);
 			var re = data.Result.List;
 			if(data.Status == 1){
 				for(var i in re){
@@ -246,7 +246,7 @@ function GetMore7(){
 		  			"Type":2
 				},
 				success:function(data){
-					console.log(data.Result);
+//					console.log(data.Result);
 					re = data.Result.List;
 					for(var i in re){
 						allAb += '<p class="index-guesstext"id="'+re[i].ID+'" onclick="ShowWorkDe(this)">'
@@ -335,7 +335,7 @@ function GetMore9(){
 				},
 				success:function(data){
 					if(data.Status == 1){
-						console.log(data.Result);			
+//						console.log(data.Result);			
 						var re = data.Result.List;		
 						for(var i in re){
 							allWi += '<p class="index-guesstext"id="'+re[i].ID+'" onclick="ShowWorkDe(this)">'

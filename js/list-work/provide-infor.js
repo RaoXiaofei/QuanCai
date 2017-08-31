@@ -68,7 +68,7 @@ function GetMore8(){
 				},
 				success:function(data){
 					if(data.Status == 1){
-						console.log(data.Result);
+//						console.log(data.Result);
 						var re = data.Result.List;			
 						for(var i in re){
 							allPro += '<p class="index-guesstext" id="'+re[i].ID+'" onclick = "ShowProDe(this)">'
@@ -132,7 +132,7 @@ function GetProvideInfor1(){
 		},
 		success:function(data){
 			if(data.Status == 1){
-				console.log(data.Result);
+//				console.log(data.Result);
 				var re = data.Result.List;			
 				for(var i in re){
 					all += '<p class="index-guesstext" id="'+re[i].ID+'" onclick = "ShowProDe(this)">'

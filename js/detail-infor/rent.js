@@ -14,7 +14,7 @@ $.ajax({
 	async:true,
 	success:function(data){
 		if(data.Status == 1){
-			console.log(data.Result);
+//			console.log(data.Result);
 			var re = data.Result;
 			/*
 			 * 公司介绍图片详情

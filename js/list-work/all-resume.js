@@ -194,7 +194,7 @@ function GetAllResume1(){
  */
 function ChooseQualiR(e){
 	quali = e.innerText;
-	console.log(quali)
+//	console.log(quali)
 	this.Qualifications = quali;
 	this.pageIndex4 = 1;
 	this.pageSize = 1000;

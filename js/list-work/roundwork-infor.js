@@ -38,7 +38,7 @@ function GetRoundWork(){
 		},
 		success:function(data){			
 			if(data.Status == 1){	
-				console.log(data.Result)
+//				console.log(data.Result)
 				for(var i in data.Result.List){
 					AllRoun += '<p class="index-guesstext" id="'+data.Result.List[i].ID+'" onclick="ShowIndexDe(this)">'
 					AllRoun += '<span class="index-text04">'+data.Result.List[i].Name+'</span>'

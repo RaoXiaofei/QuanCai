@@ -38,7 +38,7 @@ $(document).ready(function(){
 	$.ajax({
 		url:urlf+"api/Sys/GetPositionListToRe",
 		success:function(data){
-			console.log(data.Result);
+//			console.log(data.Result);
 			if(data.Status == 1){
 				for(var i = 0; i < data.Result.length; i++){
 					var re = data.Result;
@@ -111,7 +111,7 @@ $.ajax({
 			$(this).click(function(){
 				$(this).toggleClass("recWelfare-text");			
 				taggID += ""+$(this).attr("id")+",";
-				console.log(taggID);
+//				console.log(taggID);
 			})
 		})
 	}
@@ -199,7 +199,7 @@ $("#issue-resume-button").click(function(){
 		    "Token": Token
 		},
 		success:function(data){
-			console.log(data.Result);
+//			console.log(data.Result);
 			if(data.Status == 1){
 				alert("发布简历信息成功");
 			}
