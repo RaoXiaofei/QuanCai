@@ -1,0 +1,90 @@
+   <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+	<link rel="stylesheet" href="css/top.css" type="text/css" />-->
+</head>
+<body>
+	<div class="top1" id="top1">
+		<div class="container" style="min-width: 1170px;">
+			<div class="row col-xs-12 col-md-12">
+				<a href="#"><span class="top-text01 loginframe">宁波</span></a>&nbsp;&nbsp;
+		  		<a href="#"><span class="top-text02 loginframe">[切换城市]</span></a>&nbsp;
+		  		<img src="assets/首页logo.png">&nbsp;&nbsp;
+		  		<a href="index.html"><span class="top-text03 loginframe">全才通首页</span></a>
+		  		
+		  		<a data-toggle="modal" href="#login"><span id="Login"></span class="top-text04 login loginframe">登录</span><span></a>
+				  	<div class="modal fade" id="login">
+				    	<div class="modal-dialog">
+				        	<div class="modal-content"style="width: 380px; height: 436px;">
+				            	<div class="modal-header head-model" id="head-model">
+				            		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				                	<h4 class="modal-title login-title">全才通</h4>
+				            	</div>
+				            	<div class="modal-body" id="body-modal" style="padding-left: 35px;">
+					            	<p class="phone-text">手机号登录</p>
+					                <span class="phone-number">手机号</span><br />
+					            	<input type="text" class="form-control phone" id="phone"/>
+				                	<img src="assets/clear.jpg" id="qingkong"/>
+		  							<input type="text" class="form-control code-frame" id="code-frame" placeholder="验证码"
+		  								onfocus="if(placeholder=='验证码')placeholder=''" onblur="if(!placeholder)placeholder='验证码'">
+		  							<button type="button" class="btn btn-default get-code" id="get-code"><span class="get-codetext">获取验证码</span></button>
+		  							<br />
+		  							<button type="button" class="btn btn-default login-button" id="login-button" onclick="login()"><span class="login-buttontext">登录</span></button>						
+				           		</div>      
+				        	</div>
+				    	</div>
+				    </div>
+	  			</div>
+			</div>
+		</div>
+	
+	<div class="top2" id="top2">
+		<div class="container" style="min-width: 1170px;">
+			<div class="row col-xs-12 col-md-12 navi">
+				<a href="index.html"><img src="assets/QQ截图20170713091714.png" /></a>
+				<div class="nav_menu">
+					<a href="index.html"><span class="top-text05">首页</span></a>
+					<div class="dropdown nav_text01">
+						<span id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="top-text05">分类</span>
+						<ul class="dropdown-menu drMenu" aria-labelledby="dLabel" id="drMenu">
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#allwork-infor">全部职位</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#roundwork-infor">周边工作</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#resume-infor">简历</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#summer-infor">暑假工</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#bus-infor">全国大巴</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#short-infor">短期工</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#abroad-infor">出国打工</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#cofession-infor">供人</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#winner-infor">寒假工</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#rent-infor">周边租房</a></span>
+							</li>
+						</ul>
+					</div>
+					<a href="issue.html"><span class="top-text05">发布</span></a>
+					<a href="all-information.html"><span class="top-text05">个人中心</span></a>
+				</div>
+				<div class="nav_text02">
+					<input class="search-frame" type="text" id="keywords" onchange="KeySearch()"/>
+					<span class="glyphicon glyphicon-search" id="button-sousuo"></span>
+				</div>
+			</ul>
+		</div>
+	</div>
+
+</body>
+	<!--<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/login.js"></script>-->
+</html>

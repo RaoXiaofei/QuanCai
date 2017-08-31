@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>全球英才</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="css/top.css" type="text/css"/>
+	<link rel="stylesheet" href="css/list-work.css" type="text/css" />
+	<link rel="stylesheet" href="css/kuCity.css"/>
+</head>
+
+<body class="work">
+	<!--<include src="top.html"></include>-->
+	<div class="top1" id="top1">
+		<div class="container" style="min-width: 1170px;">
+			<div class="row col-xs-12 col-md-12">
+				<span class="top-text01 loginframe lalala" id="atCity"></span>&nbsp;&nbsp;
+		  		<input type="text" class="top-text02 search changeCity" placeholder="切换城市">
+		  		<img src="assets/首页logo.png">&nbsp;&nbsp;
+		  		<a href="index.html"><span class="top-text03 loginframe">全球英才首页</span></a>
+		  		
+		  		<a data-toggle="modal" href="#login"><span class="top-text04 login loginframe"  id="Login">登录</span></a>
+				  	<div class="modal fade" id="login">
+				    	<div class="modal-dialog">
+				        	<div class="modal-content"style="width: 380px; height: 436px;">
+				            	<div class="modal-header head-model" id="head-model">
+				            		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				                	<h4 class="modal-title login-title">全球英才</h4>
+				            	</div>
+				            	<div class="modal-body" id="body-modal" style="padding-left: 35px;">
+					            	<p class="phone-text">手机号登录</p>
+					                <!--<span class="phone-number">手机号</span><br />-->
+					            	<input type="text" class="form-control phone" id="phone" placeholder="手机号"
+		  								onfocus="if(placeholder=='手机号')placeholder=''" onblur="if(!placeholder)placeholder='手机号'"/>
+				                	<img src="assets/clear.jpg" id="qingkong"/>
+		  							<input type="text" class="form-control code-frame" id="code-frame" placeholder="验证码"
+		  								onfocus="if(placeholder=='验证码')placeholder=''" onblur="if(!placeholder)placeholder='验证码'">
+		  							<button type="button" class="btn btn-default get-code" id="get-code" style="width: 90px; font-size: 10px;"><span class="get-codetext">获取验证码</span></button>
+		  							<br />
+		  							<button type="button" class="btn btn-default login-button" id="login-button" onclick="login()"><span class="login-buttontext">登录</span></button>						
+				           		</div>      
+				        	</div>
+				    	</div>
+				    </div>
+				    <span class="top-text04 login loginframe ppp" id="Logout">退出登录</span>
+				<span class="top-text04 login loginframe pp" id="pp"></span>
+	  			</div>
+			</div>
+		</div>
+	
+	<div class="toptoptop" id="top2">
+		<div class="container" style="min-width: 1170px;">
+			<div class="row col-xs-12 col-md-12 navi">
+				<a href="index.html"><img src="assets/top-logo.png" /></a>
+				<div class="nav_menu">
+					<a href="index.html"><span class="top-text05">首页</span></a>
+					<div class="dropdown nav_text01">
+						<span id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="top-text05">分类</span>
+						<ul class="dropdown-menu drMenu" aria-labelledby="dLabel" id="drMenu">
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#allwork-infor">全部职位</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#roundwork-infor">周边工作</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#resume-infor">简历</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#summer-infor">暑假工</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#bus-infor">全国大巴</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#short-infor">短期工</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#abroad-infor">出国打工</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#cofession-infor">供人</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#winner-infor">寒假工</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#rent-infor">周边租房</a></span>
+							</li>
+						</ul>
+					</div>
+					<a href="issue.html"><span class="top-text05">发布</span></a>
+					<a href="all-information.html"><span class="top-text05">个人中心</span></a>
+				</div>
+				<div class="nav_text02">
+					<input class="search-frame" type="text" id="keywords" onchange="KeySearch()" placeholder="请输入关键字"
+		  								onfocus="if(placeholder=='请输入关键字')placeholder=''" onblur="if(!placeholder)placeholder='请输入关键字'"/>
+					<span class="glyphicon glyphicon-search" id="button-souo" style="cursor: pointer;"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="container" id="nav-menu" style="min-height: 600px;">	
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist" id="list-menu">
+		    <li role="presentation" id="all-pos" class="active"><a href="#allwork-infor" role="tab" data-toggle="tab" name="allwork-infor"><span class="nav-text" id="navt1">全部招聘</span></a></li>
+		    <li role="presentation" id="nav10" ><a href="#roundwork-infor" role="tab" data-toggle="tab" name="roundwork-infor"><span class="nav-text" id="navt10">周边工作</span></a></li>
+		    <li role="presentation" id="nav02"><a href="#resume-infor" role="tab" data-toggle="tab" name="resume-infor"><span class="nav-text" id="navt2">简历</span></a></li>
+		    <li role="presentation" id="nav03" ><a href="#summer-infor" role="tab" data-toggle="tab" name="summer-infor"><span class="nav-text" id="navt3">暑假工</span></a></li>
+		    <li role="presentation" id="nav04" ><a href="#bus-infor" role="tab" data-toggle="tab"><span class="nav-text" id="navt4">全国大巴</span></a></li>
+		    <li role="presentation" id="nav05"><a href="#short-infor" role="tab" data-toggle="tab"><span class="nav-text" id="navt5">短期工</span></a></li>
+		    <li role="presentation" id="nav06" ><a href="#abroad-infor" role="tab" data-toggle="tab"><span class="nav-text" id="navt6">出国打工</span></a></li>
+		    <li role="presentation" id="nav07" ><a href="#cofession-infor" role="tab" data-toggle="tab"><span class="nav-text" id="navt7">供人</span></a></li>
+		    <li role="presentation" id="nav08"><a href="#winner-infor" role="tab" data-toggle="tab"><span class="nav-text" id="navt8">寒假工</span></a></li>
+		    <li role="presentation" id="nav09"><a href="#rent-infor" role="tab" data-toggle="tab"><span class="nav-text" id="navt9">周边租房</span></a></li>
+		    
+		  </ul>
+		
+	  	<!-- Tab panes -->
+	  	<div class="tab-content">
+		  	
+		  	<!--全部工作列表页-->
+		    <div role="tabpanel" class="tab-pane active" id="allwork-infor">
+		    	<div class="container" id="list-container" > 
+					<ul class="ul-container01" id="list-job">
+						<li class="list-work01"><span class="list-text01">职位：</span></li>
+						<ul class="list" id="list-job01">
+							<!--<li class="list-work01" id="" onclick="ChoosePosi(this)"><span class="list-text03">销售代表</span></li>-->
+						</ul>
+						
+					</ul>	
+					<ul class="ul-container01" id="list-place">
+						<li class="list-work01"><span class="list-text01">地点：</span></li>
+						<ul class="list" id="list-city01">
+							<!--<li class="list-work01"><span class="list-text03">海曙</span></li>
+							<li class="list-work01"><span class="list-text03">江东</span></li>	-->
+						</ul>
+								
+					</ul>
+					<ul class="ul-container01" id="list-salary01" style="margin-bottom: 10px;">
+						<li class="list-work01"><span class="list-text01">薪资：</span></li>
+						<li class="list-work01" id="0" onclick="ChooseSalary(this)"><span class="list-text03">全部</span></li>
+						<li class="list-work01" id="1" onclick="ChooseSalary(this)"><span class="list-text03">3k以下</span></li>
+						<li class="list-work01" id="2" onclick="ChooseSalary(this)"><span class="list-text03">3k-5k</span></li>
+						<li class="list-work01" id="3" onclick="ChooseSalary(this)"><span class="list-text03">5k-10k</span></li>
+						<li class="list-work01" id="4" onclick="ChooseSalary(this)"><span class="list-text03">10k-20k</span></li>
+						<li class="list-work01" id="5" onclick="ChooseSalary(this)"><span class="list-text03">20k-30k</span></li>
+						<li class="list-work01" id="6" onclick="ChooseSalary(this)"><span class="list-text03">30k-50k</span></li>
+						<li class="list-work01" id="7" onclick="ChooseSalary(this)"><span class="list-text03">50k以上</span></li>
+					</ul>				
+				</div> 
+				
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">全部工作</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+			
+				<div class="container" id="container2">
+					<div class="row" id="allP">
+						<!--<p class="index-guesstext" id="ll" onclick="ShowIndexDe(this)">
+							<span class="index-text04">专业的销售代表</span>
+							<span class="index-text05">宁波轩马信息科技有限公司</span>
+							<span class="index-text06">宁波江东</span>
+							<span class="index-text07">2000/月</span>
+						</p>					-->
+					</div>
+				</div>	
+				
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo"  onclick="GetMore1()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+		    </div>
+			
+			<!--周边工作列表页-->
+		    <div role="tabpanel" class="tab-pane" id="roundwork-infor">
+		    	<div class="container" id="list-container" > 
+					<ul class="ul-container01" id="list-job">
+						<li class="list-work01"><span class="list-text01">职位：</span></li>
+						<ul class="list" id="list-job02">
+							<!--<li class="list-work01" id="" onclick="ChoosePosiA(this)"><span class="list-text03">销售代表</span></li>-->
+						</ul>
+						
+					</ul>	
+					<ul class="ul-container01" id="list-place">
+						<li class="list-work01"><span class="list-text01">地点：</span></li>
+						<ul class="list" id="list-city02">
+							<!--<li class="list-work01"><span class="list-text03">海曙</span></li>
+							<li class="list-work01"><span class="list-text03">江东</span></li>	-->
+						</ul>
+								
+					</ul>
+					<ul class="ul-container01" id="list-salary01" style="margin-bottom: 10px;">
+						<li class="list-work01"><span class="list-text01">薪资：</span></li>
+						<li class="list-work01" id="0" onclick="ChooseSalaryA(this)"><span class="list-text03">全部</span></li>
+						<li class="list-work01" id="1" onclick="ChooseSalaryA(this)"><span class="list-text03">3k以下</span></li>
+						<li class="list-work01" id="2" onclick="ChooseSalaryA(this)"><span class="list-text03">3k-5k</span></li>
+						<li class="list-work01" id="3" onclick="ChooseSalaryA(this)"><span class="list-text03">5k-10k</span></li>
+						<li class="list-work01" id="4" onclick="ChooseSalaryA(this)"><span class="list-text03">10k-20k</span></li>
+						<li class="list-work01" id="5" onclick="ChooseSalaryA(this)"><span class="list-text03">20k-30k</span></li>
+						<li class="list-work01" id="6" onclick="ChooseSalaryA(this)"><span class="list-text03">30k-50k</span></li>
+						<li class="list-work01" id="7" onclick="ChooseSalaryA(this)"><span class="list-text03">50k以上</span></li>
+					</ul>				
+				</div> 
+				
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">周边工作</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+			
+				<div class="container" id="container2">
+					<div class="row" id="allArou">
+						<!--<p class="index-guesstext" id="ll" onclick="ShowIndexDe(this)">
+							<span class="index-text04">专业的销售代表</span>
+							<span class="index-text05">宁波轩马信息科技有限公司</span>
+							<span class="index-text06">宁波江东</span>
+							<span class="index-text07">2000/月</span>
+						</p>					-->
+					</div>
+				</div>
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo"  onclick="GetMore2()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+		    </div>
+			    
+		    <!--简历列表页-->
+		    <div role="tabpanel" class="tab-pane" id="resume-infor">		
+				<div class="container" id="list-container" > 
+					<!--<ul class="ul-container01" id="list-quali03">
+						<li class="list-work01"><span class="list-text01">学历：</span></li>
+						<li class="list-work01" id="0" onclick="ChooseQualiR(this)"><span class="list-text02">全部</span></li>
+						<li class="list-work01" id="1" onclick="ChooseQualiR(this)"><span class="list-text03">初中</span></li>
+						<li class="list-work01" id="2" onclick="ChooseQualiR(this)"><span class="list-text03">高中</span></li>
+						<li class="list-work01" id="3" onclick="ChooseQualiR(this)"><span class="list-text03">大专</span></li>
+						<li class="list-work01" id="4" onclick="ChooseQualiR(this)"><span class="list-text03">本科</span></li>
+						<li class="list-work01" id="5" onclick="ChooseQualiR(this)"><span class="list-text03">硕士</span></li>
+						<li class="list-work01" id="6" onclick="ChooseQualiR(this)"><span class="list-text03">博士</span></li>
+					</ul>	-->
+					<ul class="ul-container01" id="list-job">
+						<li class="list-work01"><span class="list-text01">职位：</span></li>
+						<ul class="list" id="list-job03">
+							<!--<li class="list-work01" id="" onclick="ChoosePosiR(this)"><span class="list-text03">销售代表</span></li>-->
+						</ul>
+						
+					</ul>	
+					<ul class="ul-container01" id="list-place">
+						<li class="list-work01"><span class="list-text01">地点：</span></li>
+						<ul class="list" id="list-city03">
+							<!--<li class="list-work01"><span class="list-text03">海曙</span></li>
+							<li class="list-work01"><span class="list-text03">江东</span></li>	-->
+						</ul>
+								
+					</ul>
+					<ul class="ul-container01" id="list-salary01" style="margin-bottom: 10px;">
+						<li class="list-work01"><span class="list-text01">薪资：</span></li>
+						<li class="list-work01" id="0" onclick="ChooseSalaryR(this)"><span class="list-text03">全部</span></li>
+						<li class="list-work01" id="1" onclick="ChooseSalaryR(this)"><span class="list-text03">3k以下</span></li>
+						<li class="list-work01" id="2" onclick="ChooseSalaryR(this)"><span class="list-text03">3k-5k</span></li>
+						<li class="list-work01" id="3" onclick="ChooseSalaryR(this)"><span class="list-text03">5k-10k</span></li>
+						<li class="list-work01" id="4" onclick="ChooseSalaryR(this)"><span class="list-text03">10k-20k</span></li>
+						<li class="list-work01" id="5" onclick="ChooseSalaryR(this)"><span class="list-text03">20k-30k</span></li>
+						<li class="list-work01" id="6" onclick="ChooseSalaryR(this)"><span class="list-text03">30k-50k</span></li>
+						<li class="list-work01" id="7" onclick="ChooseSalaryR(this)"><span class="list-text03">50k以上</span></li>
+					</ul>				
+				</div> 
+				
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">所有简历</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+				
+				<div class="container" id="container2">
+					<div class="row" id="allRes">
+						<!--<p class="index-guesstext" id="al" onclick="ShowInforDe(this)">
+							<span class="index-text04">Lilly Griffth</span>
+							<span class="index-text05">销售经理</span>
+							<span class="index-text06">专科</span>
+							<span class="index-text07">22854</span>
+						</p>-->
+					</div>
+				</div>
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo"  onclick="GetMore3()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+			<!--暑假工列表页-->
+			<div role="tabpanel" class="tab-pane" id="summer-infor">
+				
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">暑假工</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+				
+				<div class="container" id="container2">
+					<div class="row" id="allSum">					
+						<!--<p class="index-guesstext" id="alls" onclick="ShowWorkDe(this)">
+							<span class="index-text04">专业的销售代表</span></a>
+							<span class="index-text05">Lake Jailyn</span>
+						</p>										-->
+					</div>
+				</div>
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo" onclick="GetMore4()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+			<!--全国大巴列表页-->
+			<div role="tabpanel" class="tab-pane" id="bus-infor">			
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">全国大巴</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+				
+				<div class="container" id="container2">
+					<div class="row" id="allBu">
+						<!--<p class="index-guesstext"id="alls" onclick="ShowWorkDe(this)">
+							<span class="index-text04">大巴</span>
+							<span class="index-text05">New York</span>
+						</p>		-->
+					</div>
+				</div>	
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo" onclick="GetMore5()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+			<!--短期工列表页-->
+			<div role="tabpanel" class="tab-pane" id="short-infor">
+				
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">短期工</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+				
+				<div class="container" id="container2">
+					<div class="row" id="allSho">
+						<!--<p class="index-guesstext"id="alls" onclick="ShowWorkDe(this)">
+							<span class="index-text04">专业的销售代表</span>
+							<span class="index-text05">Lilly Griffth</span>
+							<span class="index-text06">70km</span>
+						</p>				-->
+					</div>
+				</div>	
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo" onclick="GetMore6()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+			<!--出国打工列表页-->
+			<div role="tabpanel" class="tab-pane" id="abroad-infor">
+				
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">出国打工</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+				
+				<div class="container" id="container2">
+					<div class="row" id="allAbl">
+						<!--<p class="index-guesstext"id="alls" onclick="ShowWorkDe(this)">
+							<span class="index-text04">专业的销售代表</span>
+							<span class="index-text05">Lilly Griffth</span></a>
+						</p>			-->
+					</div>
+				</div>	
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo" onclick="GetMore7()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+			<!--供人列表页-->
+			<div role="tabpanel" class="tab-pane" id="cofession-infor">
+				<div class="container" id="list-container" > 
+					<ul class="ul-container01" id="list-place">
+						<li class="list-work01"><span class="list-text01">地点：</span></li>
+						<ul class="list" id="list-city04">
+							<!--<li class="list-work01"><span class="list-text03">海曙</span></li>
+							<li class="list-work01"><span class="list-text03">江东</span></li>	-->
+						</ul>
+								
+					</ul>
+					<ul class="ul-container01" id="list-salary04" style="margin-bottom: 10px;">
+						<li class="list-work01"><span class="list-text01">薪资：</span></li>
+						<li class="list-work01" id="0" onclick="ChooseSalaryP(this)"><span class="list-text03">全部</span></li>
+						<li class="list-work01" id="1" onclick="ChooseSalaryP(this)"><span class="list-text03">3k以下</span></li>
+						<li class="list-work01" id="2" onclick="ChooseSalaryP(this)"><span class="list-text03">3k-5k</span></li>
+						<li class="list-work01" id="3" onclick="ChooseSalaryP(this)"><span class="list-text03">5k-10k</span></li>
+						<li class="list-work01" id="4" onclick="ChooseSalaryP(this)"><span class="list-text03">10k-20k</span></li>
+						<li class="list-work01" id="5" onclick="ChooseSalaryP(this)"><span class="list-text03">20k-30k</span></li>
+						<li class="list-work01" id="6" onclick="ChooseSalaryP(this)"><span class="list-text03">30k-50k</span></li>
+						<li class="list-work01" id="7" onclick="ChooseSalaryP(this)"><span class="list-text03">50k以上</span></li>
+					</ul>				
+				</div> 
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">全部供人</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+				
+				<div class="container" id="container2">
+					<div class="row" id="allProv">
+						<!--<p class="index-guesstext" id="all" onclick="ShowProDe(this)">
+							<span class="index-text04">销售代表</span>
+							<span class="index-text05">宁波轩马中介</span>
+							<span class="index-text06">宁波江东</span>
+							<span class="index-text07">68408</span>
+						</p>			-->
+					</div>
+				</div>	
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo" onclick="GetMore8()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+			<!--寒假工列表页-->
+			<div role="tabpanel" class="tab-pane" id="winner-infor">
+				
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">寒假工</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+				
+				<div class="container" id="container2">
+					<div class="row" id="allWinn">
+						<!--<p class="index-guesstext"id="alls" onclick="ShowWorkDe(this)">
+							<span class="index-text04">销售代表</span>
+							<span class="index-text05">Lake Jaily</span>
+							<span class="index-text06">70km</span>
+						</p>		-->
+					</div>
+				</div>
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo" onclick="GetMore9()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+			<!--周边租房列表页-->
+			<div role="tabpanel" class="tab-pane" id="rent-infor">
+				<div class="container">
+					<div class="row" id="guess">
+						<div class="col-md-2" id="line"><span class="index-text03">周边租房</span></div>
+						<div class="col-md-10"></div>
+					</div>
+				</div>
+				
+				<div class="container" id="container2">
+					<div class="row" id="allRen">
+						<!--<p class="index-guesstext" id="allr" onclick="ShowWorkDe(this)">
+							<span class="index-text04">周边出租房</span>
+							<span class="index-text05">4189 Runt Hignway</span>
+						</p>-->
+					</div>
+				</div>	
+				<div class="container " id="container2" style="min-width: 1170px;">
+					<div class="row col-xs-4 col-md-2" id="getMo" onclick="GetMore10()">
+						<span class="glyphicon glyphicon-chevron-down" id="getMore" aria-hidden="true"></span>
+						<span class="moreText">点击加载更多</span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+			
+	</div>
+	
+	<include src="bottom.html"></include>
+	
+</body>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="layer/layer.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/urlf.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/jQuery.md5.js"></script>
+	<script src="js/html5shiv.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/index/index.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+		    if(location.hash) {
+		        $('a[href=' + location.hash + ']').tab('show');
+	    	}
+		    $(document.body).on("click", "a[data-toggle]", function(event) {
+		        location.hash = this.getAttribute("href");
+		    });
+		});
+		$(window).on('popstate', function() {
+		    var anchor = location.hash || $("a[data-toggle = tab]").first().attr("href");
+		    $('a[href=' + anchor + ']').tab('show');
+		});
+    </script>
+    <script src='http://api.map.baidu.com/api?v=2.0&ak=GAGiz9gdoRfTpImL6A2RZYxH' type='text/javascript'></script>
+    <script type="text/javascript">
+    	var cityci;
+    	// 百度地图API功能
+		var map = new BMap.Map("bdMapBox");
+		var nowCity = new BMap.LocalCity();
+		nowCity.get(bdGetPosition);
+		function bdGetPosition(result){
+			this.cityci = result.name; //当前的城市名			
+			/*自定义代码*/
+//			atCity.innerHTML = this.cityci;
+			/*自定义代码*/		
+			setCookie("city",this.cityci);
+		}	
+    </script>
+	<script src="js/kuCity.js"></script>
+    <script>
+    	$('.search').kuCity();
+    </script>
+    <script src="js/list-work/allworkInfor.js"></script>
+    <script src="js/list-work/roundwork-infor.js"></script>
+    <script src="js/list-work/summer-infor.js"></script>
+    <script src="js/list-work/bus-infor.js"></script>
+    <script src="js/list-work/all-resume.js"></script>
+    <script src="js/list-work/provide-infor.js"></script>
+    <script src="js/list-work/rent.js"></script>
+    
+</html>

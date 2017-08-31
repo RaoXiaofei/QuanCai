@@ -1,0 +1,136 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>全球英才</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/top.css"/>
+	<link rel="stylesheet" href="css/kuCity.css" />
+	<link rel="stylesheet" href="css/intro-text.css" />
+</head>
+
+<body>
+	<!--顶部栏-->
+	<!--<include src = "top.html"></include>-->
+	<div class="top1" id="top1" style="position: relative;">
+		<div class="container" style="min-width: 1170px;">
+			<div class="row col-xs-12 col-md-12">
+				<span class="top-text01 loginframe" id="atCity"></span>&nbsp;&nbsp;
+		  		<input type="text" class="top-text02 search changeCity" placeholder="切换城市" value="">
+		  		<img src="assets/首页logo.png">&nbsp;&nbsp;
+		  		<a href="index.html"><span class="top-text03 loginframe">全球英才首页</span></a>
+				
+		  		<a data-toggle="modal" href="#login"><span class="top-text04 login loginframe" id="Login">登录</span></a>
+				  	<div class="modal fade" id="login">
+				    	<div class="modal-dialog">
+				        	<div class="modal-content"style="width: 380px; height: 436px;">
+				            	<div class="modal-header head-model" id="head-model">
+				            		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				                	<h4 class="modal-title login-title">全球英才</h4>
+				            	</div>
+				            	<div class="modal-body" id="body-modal" style="padding-left: 35px;">
+					            	<p class="phone-text">手机号登录</p>
+					                <!--<span class="phone-number">手机号</span><br />-->
+					            	<input type="text" class="form-control phone" id="phone" placeholder="手机号"
+		  								onfocus="if(placeholder=='手机号')placeholder=''" onblur="if(!placeholder)placeholder='手机号'"/>
+				                	<img src="assets/clear.jpg" id="qingkong"/>
+		  							<input type="text" class="form-control code-frame" id="code-frame" placeholder="验证码"
+		  								onfocus="if(placeholder=='验证码')placeholder=''" onblur="if(!placeholder)placeholder='验证码'">
+		  							<button type="button" class="btn btn-default getCode" id="get-code" style="width: 90px;font-size: 24px;"><span class="get-codetext">获取验证码</span></button>
+		  							<br />
+		  							<button type="button" class="btn btn-default login-button" id="login-button" onclick="login()"><span class="login-buttontext">登录</span></button>						
+				           		</div>      
+				        	</div>
+				    	</div>
+				    </div>
+				
+					<span class="top-text04 login loginframe ppp" id="Logout">退出登录</span>
+					<span class="top-text04 login loginframe pp" id="pp"></span>
+	  		    </div>
+			</div>
+		</div>
+	<div class="toptoptop" id="top2">
+		<div class="container" style="min-width: 1170px;">
+			<div class="row col-xs-12 col-md-12 navi">
+				<a href="index.html"><img src="assets/top-logo.png" /></a>
+				<div class="nav_menu">
+					<a href="index.html"><span class="top-text05">首页</span></a>
+					<div class="dropdown nav_text01">
+						<span id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="top-text05">分类</span>
+						<ul class="dropdown-menu drMenu" aria-labelledby="dLabel" id="drMenu">
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#allwork-infor">全部职位</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#roundwork-infor">周边工作</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#resume-infor">简历</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#summer-infor">暑假工</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#bus-infor">全国大巴</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#short-infor">短期工</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#abroad-infor">出国打工</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#cofession-infor">供人</a></span>
+							</li>
+							<li>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#winner-infor">寒假工</a></span>
+								<span class="indexMenuText"><a href="list-work.html?__hbt=1502417911378#rent-infor">周边租房</a></span>
+							</li>
+						</ul>
+					</div>
+					<a href="issue.html"><span class="top-text05">发布</span></a>
+					<a href="all-information.html"><span class="top-text05">个人中心</span></a>
+				</div>
+				<div class="nav_text02">
+					<input class="search-frame" type="text" id="keywords"  placeholder="请输入关键字"
+		  								onfocus="if(placeholder=='请输入关键字')placeholder=''" onblur="if(!placeholder)placeholder='请输入关键字'"/>
+					<span class="glyphicon glyphicon-search" id="button-sousuo"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+			
+	<div class="container" style="min-width: 1170px; min-height: 600px;">
+		<div class="row col-xs-12 col-md-12" id="middle-container">			
+			<img src="assets/QQ截图20170711170842.png" style="width: 100%; height: 250px; margin-top: 30px;"/>
+			<p class="intro-text">全球英才一直专注于互联网领域，带给求职者方便的精准的求职体验，随时随地，直接开聊，聊爽就约，入职快，大巴随心坐，旅馆轻松住，出国打工一键搞定。</p>
+		</div>
+	</div>
+
+	<!-- 引用底部栏  -->
+	<include src="bottom.html"></include>
+</body>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="layer/layer.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/urlf.js"></script>
+    <script src="js/login.js"></script>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/jQuery.md5.js"></script>
+    <!-- Initialize Swiper -->
+    <script src="js/changecity.js"></script>
+    <script src='http://api.map.baidu.com/api?v=2.0&ak=GAGiz9gdoRfTpImL6A2RZYxH' type='text/javascript'></script>
+    <script type="text/javascript">
+    	var cityci;
+    	// 百度地图API功能
+		var map = new BMap.Map("bdMapBox");
+		var nowCity = new BMap.LocalCity();
+		nowCity.get(bdGetPosition);
+		function bdGetPosition(result){
+			this.cityci = result.name; //当前的城市名			
+			/*自定义代码*/
+//			atCity.innerHTML = this.cityci;
+			/*自定义代码*/		
+			setCookie("city",this.cityci);
+		}	
+    </script>
+    <script src="js/kuCity.js"></script>
+    <script>
+    	$('.search').kuCity();
+    </script>
+    <script src="js/index/index.js"></script>  
+</html>

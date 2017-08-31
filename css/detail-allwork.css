@@ -1,0 +1,97 @@
+.work{
+	background-color: #E7E7E7;
+}
+#work-kind{
+	background-color:#FFFFFF;
+	margin-top:40px ;
+	margin-bottom: 20px;
+}
+#work-describe{
+	background-color:#FFFFFF;
+	margin-bottom: 20px;
+}
+#company{
+	background-color:#FFFFFF;
+	margin-bottom: 40px;
+}
+.work-text01{
+	font-family:"微软雅黑";
+	font-size: 18px;
+	color: #9B9B9B;
+}
+.work-text02{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 36px;
+	color: #4A4A4A;
+}
+.work-text03{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 36px;
+	color: #FD4545;
+	float: right;
+}
+.work-text04{
+	font-family:"微软雅黑";
+	font-size: 20px;
+	color: #9B9B9B;
+}
+.work-text05{
+	display: inline-block;
+	margin-left:20px ;
+	font-family:"微软雅黑";
+	font-size: 20px;
+	color: #4A4A4A;	
+}
+.work-text06{
+	font-family:"微软雅黑";
+	font-size: 20px;
+	color: #FFFFFF;
+}
+.work-text07{
+	font-family:"微软雅黑";
+	font-size: 18px;
+	color: #4A4A4A;
+}
+.work-text08{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 28px;
+	color: #4A4A4A;
+}
+.work-section01{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 14px;
+	color: #4A4A4A;
+	margin-top: 40px;
+}
+.work-section02{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 14px;
+	color: #4A4A4A;
+	margin-top: 20px;
+}
+#phone-button{
+	background-color: #FF6146;
+}
+.work-text{
+	width: 969px;
+	margin-top: 36px;
+	margin-left: 100px;
+	margin-bottom: 40px;
+}
+.work-line{
+	display: block;
+	height: 50px;
+}
+.div-worksection{
+	margin-top: 40px;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #FF6146;
+    border-color: #FF6146;
+}

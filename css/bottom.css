@@ -1,0 +1,47 @@
+.bo{
+	width: 100%;
+	min-width: 1170px;
+	margin-top: 60px;
+	height: 200px;
+	background-color: #FF6146;
+}
+.bott{
+	clear: both;
+}
+.bott div{
+	width: 30%;
+	float: left;
+	margin-right: 15px;
+}
+.bott a:link{
+	text-decoration: none;
+}
+.bott a:visited{
+	text-decoration: none;
+}
+.bott a:hover{
+	text-decoration: none;
+}
+.bott a:active{
+	text-decoration: none;
+}
+.h2{
+	font-family: "微软雅黑";
+	font-size: 20px;
+	color: #FFFFFF;
+	letter-spacing: 2.22px;
+	margin-top: 0;
+}
+.h5{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+}
+#bottom-content{
+	padding-top: 47px;
+}
+#bottom-text{
+	padding-left: 100px;
+	border-left: 3px solid #FFFFFF;
+}

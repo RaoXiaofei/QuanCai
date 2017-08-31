@@ -1,0 +1,132 @@
+.parttimejob{
+	background-color: #E7E7E7;
+}
+#div-part01{
+	background-color: #FFFFFF;
+	margin-top: 40px;
+}
+#div-part02{
+	margin-top: 20px;
+	margin-bottom: 40px;
+	background-color: #FFFFFF;
+}
+.work-text09{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 36px;
+	color: #4A4A4A;
+}
+.work-text01{
+	margin-top: 36px;
+	margin-left: 100px;
+	margin-bottom: 40px;
+	float: left;
+}
+.work-text02{
+	margin-top: 36px;
+	margin-left: 650px;
+	margin-bottom: 40px;
+}
+.work-section03{
+	margin-top: 40px;
+}
+.work-line01{
+	margin-top: 30px;
+}
+.work-line02{
+	margin-top: 95px;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #FF6146;
+    border-color: #FF6146;
+    margin-right: 25px;
+}
+#workImg{
+	position: relative;
+}
+#workImg div{
+	display: inline-block;
+	margin-right: 10px;
+}
+#workImg div img{
+	width: 120px;
+	height: 120px;
+}
+#workImg .img1{
+	position: absolute;
+	top: 150px;
+	left: 0px;
+}
+#workImg .img2{
+	position: absolute;
+	top: 150px;
+	left: 135px;
+}
+
+
+.work{
+	background-color: #E7E7E7;
+}
+#work-kind{
+	background-color:#FFFFFF;
+	margin-top:40px ;
+	margin-bottom: 20px;
+}
+#work-describe{
+	background-color:#FFFFFF;
+	margin-bottom: 20px;
+}
+#company{
+	background-color:#FFFFFF;
+	margin-bottom: 40px;
+}
+
+.work-text05{
+	display: inline-block;
+	margin-left:15px ;
+	font-family:"微软雅黑";
+	font-size: 20px;
+	color: #4A4A4A;	
+}
+.work-text08{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 28px;
+	color: #4A4A4A;
+}
+.work-section01{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 14px;
+	color: #4A4A4A;
+	margin-top: 40px;
+}
+.work-section02{
+	font-family:"微软雅黑";
+	font-weight: bold;
+	font-size: 14px;
+	color: #4A4A4A;
+	margin-top: 20px;
+}
+#phone-button{
+	background-color: #FF6146;
+}
+.work-text{
+	width: 969px;
+	margin-top: 36px;
+	margin-left: 100px;
+	margin-bottom: 40px;
+}
+.work-line{
+	display: block;
+	height: 50px;
+}
+.div-worksection{
+	margin-top: 40px;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #FF6146;
+    border-color: #FF6146;
+}
